@@ -25,10 +25,6 @@ public class RestaurantsService {
 	private UserRepository userRepository;
 	
 	
-	
-	
-	
-	
 	@Autowired
 	private EmailRepository emailRepository;
 	
@@ -37,27 +33,16 @@ public class RestaurantsService {
 	}
 	
 	
-		
-	
-
-	
 	// getting all id's
 	public List<restaurants> getRestaurants() {
 		return restaurantsRepository.findAll();
 	}
 
-	// updating employee
+
 	public void updateRestaurants(restaurants restaurants) {
 		restaurantsRepository.save(restaurants);
 
 	}
-
-	// deleting employee
-	public void deleteEmployee(restaurants employee) {
-		restaurantsRepository.delete(employee);
-
-	}
-	
 	
 	
 	public boolean validateemail(User1 email) {
@@ -75,6 +60,28 @@ public class RestaurantsService {
 
 		}
 
+
+	public void deleteRestaurants(int id) {
+		// TODO Auto-generated method stub
+		restaurantsRepository.deleteById(id);
+	}
+
+
+//
+//	public void updateRestaurants(int id) {
+//		restaurantsRepository.findById(id);
+//		// TODO Auto-generated method stub
+//		
+////	}
+
 	
 	
+
+
+
+
+//	public void updateRestaurants(int id) {
+//		restaurantsRepository.findById(id);// TODO Auto-generated method stub
+//		
+//	}
 }

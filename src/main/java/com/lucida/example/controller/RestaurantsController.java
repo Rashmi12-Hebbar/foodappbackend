@@ -63,16 +63,12 @@ public class RestaurantsController {
 		return getResponse(200, "SUCCESS", "");
 	}
 
-	@RequestMapping("/deleteRestaurants")
-	public ResponseEntity<Response> SaveEmployee2(@RequestBody restaurants restaurants) {
-		restaurantsService.deleteEmployee(restaurants);
+	@DeleteMapping("/deleteRestaurants/{id}")
+	public ResponseEntity<Response> SaveRestaurants(@PathVariable int id) {
+		restaurantsService.deleteRestaurants(id);
 		return getResponse(200, "SUCCESS", "");
 	}
 
-	
-	
-	
-	
 	@RequestMapping("/checkemail")
 	public Response validate(@RequestBody User1 email) {
 		System.out.println(email);
@@ -88,6 +84,8 @@ public class RestaurantsController {
 		restaurantsService.updateUser(user);
 	return getResponse(200, "SUCCESS", "");
 	}
+	
+	
 	
 	@DeleteMapping("/deleteUser/{id}")
 	public ResponseEntity<Response> Saveuser(@PathVariable int id) {

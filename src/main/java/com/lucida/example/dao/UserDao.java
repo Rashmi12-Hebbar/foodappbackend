@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.lucida.example.entity.User1;
 
 @Repository
+
 public interface UserDao extends CrudRepository<User1, Long> {
 
 	//List<User> findByEmailid(String emailId);

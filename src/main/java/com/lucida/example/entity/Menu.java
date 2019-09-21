@@ -22,16 +22,25 @@ public class Menu {
 		
 		@Column(name="mid")
 		private int mid;
+		
+//		@Column(name="menu_url")
+//		private int menu_url;
 
-		public int getId() {
-			return id;
-		}
-
-		public Menu(int id, String menu_name, int mid) {
+		public Menu(int id, String menu_name, int mid, int menu_url) {
 			super();
 			this.id = id;
 			this.menu_name = menu_name;
 			this.mid = mid;
+//			this.menu_url = menu_url;
+		}
+
+		public Menu() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+		public int getId() {
+			return id;
 		}
 
 		public void setId(int id) {
@@ -53,5 +62,15 @@ public class Menu {
 		public void setMid(int mid) {
 			this.mid = mid;
 		}
+
+//		public int getMenu_url() {
+//			return menu_url;
+//		}
+//
+//		public void setMenu_url(int menu_url) {
+//			this.menu_url = menu_url;
+//		}
+
+		
 	
 }
